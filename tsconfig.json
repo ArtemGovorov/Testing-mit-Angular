@@ -14,7 +14,9 @@
       "dom"
     ],
     "types": [
-      "hammerjs"
+      "node",
+      "hammerjs",
+      "jasmine"
     ]
   }
 }
