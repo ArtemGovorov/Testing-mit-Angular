@@ -2,6 +2,7 @@ import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
 import { BrowserModule } from '@angular/platform-browser';
+import { MaterialModule } from '@angular/material';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -11,13 +12,15 @@ import { PersonsOnGithubComponent } from './person/persons-on-github.component';
 import { PersonFilter } from './person/person-filter.pipe';
 import { PersonDetailGuard } from './person/person-guard.service';
 import { PersonService } from './person/person.service';
+import 'hammerjs';
 
 @NgModule({
   imports: [
     BrowserModule,
     AppRoutingModule,
     FormsModule,
-    HttpModule
+    HttpModule,
+    MaterialModule.forRoot()
   ],
   declarations: [
     AppComponent,
