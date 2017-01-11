@@ -3,7 +3,7 @@ import { Http } from '@angular/http';
 import { Observable } from 'rxjs/observable';
 import 'rxjs/Rx';
 
-import { Person } from './../model/person';
+import { Person } from './person';
 
 @Injectable()
 export class PersonService {

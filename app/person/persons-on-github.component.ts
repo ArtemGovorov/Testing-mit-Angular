@@ -2,8 +2,8 @@ import { Component, OnInit } from '@angular/core';
 import { Http, Response } from '@angular/http';
 import { Observable } from 'rxjs/observable';
 
-import { Person } from './../../model/person';
-import { PersonService } from './../../services/person.service';
+import { PersonService } from './person.service';
+import { Person } from './person';
 
 @Component({
     moduleId: module.id,

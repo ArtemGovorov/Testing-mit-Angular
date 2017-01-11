@@ -1,10 +1,10 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 
-import { PersonDetailComponent } from './components/allPersons/person-detail.component';
-import { PersonListComponent } from './components/allPersons/person-list.component';
-import { PersonsOnGithubComponent } from './components/github/persons-on-github.component';
-import { PersonDetailGuard } from './services/person-guard.service';
+import { PersonDetailComponent } from './person/person-detail.component';
+import { PersonListComponent } from './person/person-list.component';
+import { PersonsOnGithubComponent } from './person/persons-on-github.component';
+import { PersonDetailGuard } from './person/person-guard.service';
 
 const routes: Routes = [
   { path: 'persons', component: PersonListComponent },

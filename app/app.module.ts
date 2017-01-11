@@ -5,12 +5,12 @@ import { BrowserModule } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { PersonDetailComponent } from './components/allPersons/person-detail.component';
-import { PersonListComponent } from './components/allPersons/person-list.component';
-import { PersonsOnGithubComponent } from './components/github/persons-on-github.component';
-import { PersonFilter } from './pipes/person-filter.pipe';
-import { PersonDetailGuard } from './services/person-guard.service';
-import { PersonService } from './services/person.service';
+import { PersonDetailComponent } from './person/person-detail.component';
+import { PersonListComponent } from './person/person-list.component';
+import { PersonsOnGithubComponent } from './person/persons-on-github.component';
+import { PersonFilter } from './person/person-filter.pipe';
+import { PersonDetailGuard } from './person/person-guard.service';
+import { PersonService } from './person/person.service';
 
 @NgModule({
   imports: [

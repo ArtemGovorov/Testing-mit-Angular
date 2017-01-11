@@ -1,8 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 
-import { Person } from './../../model/person';
-import { PersonService } from './../../services/person.service';
+import { Person } from './person';
+import { PersonService } from './person.service';
 
 @Component({
     moduleId: module.id,

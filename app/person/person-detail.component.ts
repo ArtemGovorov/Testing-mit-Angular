@@ -1,8 +1,8 @@
 import { Component, Input, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
 
-import { Person } from './../../model/person';
-import { PersonService } from './../../services/person.service';
+import { PersonService } from './person.service';
+import { Person } from './person';
 
 @Component({
   moduleId: module.id,
@@ -20,24 +20,22 @@ export class PersonDetailComponent implements OnInit {
   }
 
   ngOnInit(): void {
-    this._route.params.subscribe(
-      params => {
-        let personId = +params['personId'];
-        this.getPerson(personId);
-      });
+    this._route.params.subscribe(params => {
+      let personId = +params["personId"];
+      this.getPerson(personId);
+    });
   }
 
   getPerson(id: number) {
     this._personService.getPersonById(id).subscribe(res => this.person = res);
   }
 
-  onSave({value, valid}: { value: Person, valid: boolean }) { //Example of Object destructuring
+  onSave({value, valid}: { value: Person, valid: boolean }) {
+    //Example of Object destructuring
     console.log(value);
     console.log(valid);
     if (valid) {
-      this._personService.savePerson(this.person).subscribe(res =>
-        this.onBack()
-      );
+      this._personService.savePerson(this.person).subscribe(res => this.onBack());
     }
   }
 
