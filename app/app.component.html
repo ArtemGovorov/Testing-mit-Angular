@@ -1,0 +1,25 @@
+<md-sidenav-layout>
+    <md-sidenav #sidenav mode="side" opened="true" class="app-sidenav">
+        <ul class="nav nav-pills">
+            <li [class.active]="url.startsWith('/person')"><a routerLink="/persons">All Persons</a></li>
+            <li [class.active]="url==='/developers'"> <a routerLink="/developers">Developers</a></li>
+        </ul>
+    </md-sidenav>
+
+    <md-toolbar color="primary">
+        <button class="app-icon-button" (click)="sidenav.toggle()">
+        <i class="material-icons app-toolbar-menu">menu</i>
+        </button> Person Editor
+
+        <span class="app-toolbar-filler"></span>
+        <!--<button md-button (click)="isDarkTheme = !isDarkTheme">TOGGLE DARK THEME</button>-->
+    </md-toolbar>
+
+    <div class="app-content">
+        <div class="container">
+            <div>
+                <router-outlet></router-outlet>
+            </div>
+        </div>
+    </div>
+</md-sidenav-layout>

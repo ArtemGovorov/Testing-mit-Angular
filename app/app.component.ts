@@ -3,19 +3,10 @@ import { Event, Router } from '@angular/router';
 
 @Component(
     {
+        moduleId: module.id,
         selector: 'my-app',
-        template: `
-        <div class='container'>
-            <h1>Person Editor</h1>
-            <ul class="nav nav-pills">
-                <li [class.active]="url.startsWith('/person')"><a routerLink="/persons">All Persons</a></li>
-                <li [class.active]="url==='/developers'">  <a routerLink="/developers" >Developers</a></li>
-            </ul>
-            <div style='margin-top: 10px;'>
-                <router-outlet></router-outlet>
-            </div>
-        </div>
-           `
+        templateUrl: "app.component.html",
+        styleUrls: ["app.component.css"]
     }
 )
 export class AppComponent implements OnInit {
