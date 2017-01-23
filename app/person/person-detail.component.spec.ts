@@ -1,4 +1,4 @@
-xdescribe('MyList Tests', () => {
+describe('MyList Tests', () => {
     let list: string[];
 
     beforeEach(() => {

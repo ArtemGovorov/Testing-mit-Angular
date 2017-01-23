@@ -1,8 +1,7 @@
-import { NgModule } from '@angular/core';
+import { NgModule, CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
 import { BrowserModule } from '@angular/platform-browser';
-import { MaterialModule } from '@angular/material';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -19,8 +18,7 @@ import 'hammerjs';
     BrowserModule,
     AppRoutingModule,
     FormsModule,
-    HttpModule,
-    MaterialModule.forRoot()
+    HttpModule
   ],
   declarations: [
     AppComponent,
@@ -33,6 +31,7 @@ import 'hammerjs';
     PersonService,
     PersonDetailGuard
   ],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
+  schemas: [CUSTOM_ELEMENTS_SCHEMA]
 })
 export class AppModule { }

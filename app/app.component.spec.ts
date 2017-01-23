@@ -35,8 +35,8 @@ describe('AppComponent (inline template)', () => {
     });
 
     it('should display a different test title', () => {
-        comp.url = 'Test Title';
+        comp.url = 'Person Editor';
         fixture.detectChanges();
-        expect(el.textContent).toContain('Test Title');
+        expect(el.textContent).toContain("Person Editor");
     });
 });
