@@ -30,6 +30,12 @@ module.exports = function (wallaby) {
       app.use('/node_modules', express.static(require('path').join(__dirname, 'node_modules')));
     },
 
+    compilers: {
+      'app/**/*.ts': wallaby.compilers.typeScript({
+        "module": 'system'
+      })
+    },
+
     testFramework: 'jasmine',
 
     debug: true,
@@ -39,7 +45,12 @@ module.exports = function (wallaby) {
 
       System.config({
         transpiler: 'none',
-
+        meta: {
+          'app/*': {
+            scriptLoad: true,
+            format: 'register' // or 'amd' for AMD
+          }
+        },
         // Extend usual application package list with test folder
         packages: {'testing': {main: 'index.js', defaultExtension: 'js'}},
 
