@@ -32,7 +32,7 @@ module.exports = function (wallaby) {
 
     compilers: {
       'app/**/*.ts': wallaby.compilers.typeScript({
-        "module": 'system'
+        module: 'system'
       })
     },
 
@@ -48,7 +48,7 @@ module.exports = function (wallaby) {
         meta: {
           'app/*': {
             scriptLoad: true,
-            format: 'register' // or 'amd' for AMD
+            format: 'register'
           }
         },
         // Extend usual application package list with test folder
